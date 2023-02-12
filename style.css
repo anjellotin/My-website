@@ -11,11 +11,14 @@ header {
     width: 100%;
 }
 nav {
+    background-color:#333333 ;
+    color: #f5f5dc;
     font-size: 1.5rem;
-    border-radius: 8px;
+    border-radius: 0 0 10px 10px;
     display: flex;
     justify-content: flex-end;
     height: 100%;
+    font-family: 'Concert One', cursive;
 }
 .nav-list {
     display: flex;
@@ -35,15 +38,15 @@ main {
     margin-top:2em ;
 }
 .self-img {
-    
-    width: 12vw;
-    height: 25vh;
+    width: 20vw;
+    height: 20vh;
     border-radius: 50%;
 }
 .about-sec {
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 .project-sec {
     width: 100%;
@@ -55,12 +58,23 @@ main {
 .container {
     display: flex;
     flex-direction: row;
-    margin: 2% 5% 2% 5%;
-    gap: 10px;
+    margin: 2% 5% 0 5%;
 }
 .boxes {
-    border: 2px solid black;
-    border-radius: 8px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 1rem;
+    color:#333333;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5dc;
+    box-shadow: 3px 3px 33px -1px rgba(0,0,0,0.75);
+-moz-box-shadow: 3px 3px 33px -1px rgba(0,0,0,0.75);
+box-shadow: 3px 3px 33px -1px rgba(0,0,0,0.75);
+}
+h3 {
+    font-size: 1.5rem;
+    font-family: 'Concert One', cursive;
+    color: #101010;
 }
 .icons {
     display: flex;
@@ -71,7 +85,11 @@ main {
 }
 footer {
     width: 100%;
-    height: 20vh;
+    height: 23vh;
+    font-family: 'Concert One', cursive;
+    background-color: #333333;
+    border-radius: 10px 10px 0 0;
+    margin-top: 15%;
 }
 h2 {
     text-align: center;
@@ -87,12 +105,20 @@ h2 {
 }
 #contact-btn {
     background-color: transparent;
-    border: none;
+    border-radius: 10px;
+    border:#101010;
+    width: 15vw;
+    height: 3vh;
+    background-color:#101010;
+    color: #faebd7;
+    margin-bottom: 1%;
 }
-@media only screen and (max-width: 768px) {
+/* medium devices*/
+@media only screen and (min-width: 768px) {
     nav {
         display: flex;
         justify-content: center;
+        text-align: center;
         font-size: 2rem;
     }
     .self-img {
@@ -109,11 +135,89 @@ h2 {
     .boxes {
         display: flex;
         flex-direction: row;
-        border: 2px solid black;
-        border-radius: 8px;
+        border-radius: 20px;
     }
     .project-img {
         width: 20vw;
         height:20vh
     }
+}
+/* Extra Small devices*/
+@media only screen and (max-width: 600px) {
+    nav {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .self-img {
+        width: 15vw;
+        height: 15vh;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 2% 5% 2% 5%;
+        gap: 10px;
+        
+    }
+    .boxes {
+        border-radius: 20px;
+    }
+}
+/* small devices*/
+
+/* large devices*/
+@media only screen and (min-width: 992px) {
+    nav {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: flex-end;
+        height: 100%;
+    }
+    .nav-list {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 40px;
+    }
+    .self-img {
+        width: 15vw;
+        height: 15vh;
+    }
+    .project-sec {
+    width: 100%;
+    }
+    .container {
+    display: flex;
+    flex-direction: row;
+    margin: 2% 5% 2% 5%;
+    gap: 10px;
+    }
+    .boxes {
+    border-radius: 10px;
+    flex-wrap: wrap;
+    }
+    #contact-btn {
+        width: 10vw;
+    }
+    
+}
+@media only screen and (min-width: 1200px) {
+    .self-img {
+    width: 10vw;
+    height: 20vh;
+    border-radius: 50%;
+    }
+    .project-img {
+        width: 15vw;
+        height: 23vh;
+    }
+    #contact-btn {
+        width: 10vw;
+    }
+}
+
+.nav-list li:hover {
+    text-decoration: underline;
 }
